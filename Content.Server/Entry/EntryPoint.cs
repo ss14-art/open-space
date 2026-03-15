@@ -24,6 +24,7 @@ using Content.Server.Preferences.Managers;
 using Content.Server.ServerInfo;
 using Content.Server.ServerUpdates;
 using Content.Server.Voting.Managers;
+using Content.Server._OpenSpace.TTS; // OpenSpace-TTS
 using Content.Shared.CCVar;
 using Content.Shared.FeedbackSystem;
 using Content.Shared.Kitchen;
@@ -137,6 +138,7 @@ namespace Content.Server.Entry
             _watchlistWebhookManager.Initialize();
             _job.Initialize();
             _rateLimit.Initialize();
+            IoCManager.Resolve<TTSManager>().Initialize(); // OpenSpace-TTS
         }
 
         public override void PostInit()

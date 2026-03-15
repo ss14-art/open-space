@@ -252,6 +252,8 @@
     requiredMobState:
     - Critical
     - Dead
+  - type: TTS
+    voice: fact_core
 
 - type: entity
   abstract: true

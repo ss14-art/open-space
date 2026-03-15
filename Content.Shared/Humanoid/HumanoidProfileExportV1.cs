@@ -62,6 +62,9 @@ public sealed partial class HumanoidCharacterProfileV1
     public ProtoId<SpeciesPrototype> Species;
 
     [DataField]
+    public string Voice; // OpenSpace-TTS
+
+    [DataField]
     public int Age;
 
     [DataField]
@@ -81,7 +84,7 @@ public sealed partial class HumanoidCharacterProfileV1
 
     public HumanoidCharacterProfile ToV2()
     {
-        return new(Name, FlavorText, Species, Age, Sex, Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts);
+        return new(Name, FlavorText, Species, Voice, Age, Sex, Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts); //Voice OpenSpace-TTS
     }
 }
 

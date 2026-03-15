@@ -151,4 +151,12 @@ public sealed partial class BorgTypePrototype : IPrototype
     /// </summary>
     [DataField]
     public SoundSpecifier FootstepCollection { get; set; } = new SoundCollectionSpecifier(DefaultFootsteps);
+
+    // OpenSpace-TTS start
+    /// <summary>
+    /// TTS voice.
+    /// </summary>
+    [DataField]
+    public string? VoicePrototypeId { get; set; } = "fact_core";
+    // OpenSpace-TTS end
 }

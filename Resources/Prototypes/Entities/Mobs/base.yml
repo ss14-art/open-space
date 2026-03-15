@@ -36,6 +36,7 @@
   - type: ContentEye
   - type: CameraRecoil
   - type: MindContainer
+  - type: TTS # OpenSpace-TTS
   - type: RequireProjectileTarget
     active: False
 

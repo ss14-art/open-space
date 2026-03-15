@@ -15,13 +15,15 @@ public sealed class VoiceMaskBuiState : BoundUserInterfaceState
     public readonly string? Verb;
     public readonly bool Active;
     public readonly bool AccentHide;
+    public readonly string Voice; // OpenSpace-TTS
 
-    public VoiceMaskBuiState(string name, string? verb, bool active, bool accentHide)
+    public VoiceMaskBuiState(string name, string? verb, bool active, bool accentHide, string voice) // OpenSpace-TTS
     {
         Name = name;
         Verb = verb;
         Active = active;
         AccentHide = accentHide;
+        Voice = voice;  // OpenSpace-TTS
     }
 }
 

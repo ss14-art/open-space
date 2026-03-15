@@ -72,6 +72,8 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: medical
+  - type: TTS
+    voice: fact_core
 
 - type: entity
   id: BorgChassisService

@@ -3,6 +3,7 @@ using Content.Shared.Interaction;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Movement.Components;
 using Content.Shared.Silicons.Borgs.Components;
+using Content.Shared._OpenSpace.TTS; // OpenSpace-TTS
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
@@ -120,6 +121,13 @@ public abstract class SharedBorgSwitchableTypeSystem : EntitySystem
         {
             footstepModifier.FootstepSoundCollection = prototype.FootstepCollection;
         }
+
+        // OpenSpace-TTS start
+        if (TryComp(entity, out TTSComponent? tts))
+        {
+            tts.VoicePrototypeId = prototype.VoicePrototypeId;
+        }
+        // OpenSpace-TTS end
 
         if (prototype.SpriteBodyMovementState is { } movementState)
         {

@@ -28,6 +28,7 @@ public sealed class VoiceMaskBoundUserInterface : BoundUserInterface
         _window.OnVerbChange += verb => SendMessage(new VoiceMaskChangeVerbMessage(verb));
         _window.OnToggle += OnToggle;
         _window.OnAccentToggle += OnAccentToggle;
+        _window.OnVoiceChange += voice => SendMessage(new VoiceMaskChangeVoiceMessage(voice)); // OpenSpace-TTS
     }
 
     private void OnNameSelected(string name)
@@ -52,7 +53,8 @@ public sealed class VoiceMaskBoundUserInterface : BoundUserInterface
             return;
         }
 
-        _window.UpdateState(cast.Name, cast.Verb, cast.Active, cast.AccentHide);
+        _window.UpdateState(cast.Name, cast.Verb, cast.Active, cast.AccentHide, cast.Voice); //cast.Voice OpenSpace-TTS
+
     }
 
     protected override void Dispose(bool disposing)

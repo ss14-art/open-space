@@ -1,5 +1,7 @@
 using Content.Shared.Speech;
 using Robust.Shared.Prototypes;
+using Content.Shared.Humanoid; // OpenSpace-TTS
+using Content.Shared.Preferences; // OpenSpace-TTS
 
 namespace Content.Shared.VoiceMask;
 
@@ -37,6 +39,12 @@ public sealed partial class VoiceMaskComponent : Component
     /// </summary>
     [DataField]
     public EntProtoId Action = "ActionChangeVoiceMask";
+
+    // OpenSpace-TTS Start
+    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public string VoiceId = HumanoidCharacterProfile.DefaultVoice;
+    // OpenSpace-TTS End
 
     /// <summary>
     ///     Reference to the action.
