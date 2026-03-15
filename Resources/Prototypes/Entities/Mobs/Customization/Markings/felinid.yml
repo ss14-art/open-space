@@ -1,0 +1,31 @@
+- type: marking
+  id: FelinidEarsOuter
+  bodyPart: HeadTop
+  groupWhitelist: [ Felinid ]
+  sprites:
+  - sprite: Mobs/Customization/felinid_parts.rsi
+    state: m_ears_cat_COMBINED
+
+- type: marking
+  id: FelinidEarsInner
+  bodyPart: HeadSide
+  groupWhitelist: [ Felinid ]
+  sprites:
+  - sprite: Mobs/Customization/felinid_parts.rsi
+    state: m_earsinner_cat_FRONT
+
+- type: marking
+  id: FelinidTail
+  bodyPart: Tail
+  groupWhitelist: [ Felinid ]
+  sprites:
+  - sprite: Mobs/Customization/felinid_parts.rsi
+    state: m_tail_cat_FRONT
+
+- type: marking
+  id: FelinidTailWagging
+  bodyPart: Tail
+  groupWhitelist: [ Felinid ]
+  sprites:
+  - sprite: Mobs/Customization/felinid_parts.rsi
+    state: m_waggingtail_cat_FRONT
