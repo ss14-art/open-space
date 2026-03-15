@@ -118,7 +118,6 @@
   parent: AppearanceFelinid
   id: MobFelinidDummy
   name: Uwist McHands
-  noSpawn: true
   suffix: Dummy
 
 - type: entity
